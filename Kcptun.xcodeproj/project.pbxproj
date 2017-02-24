@@ -264,7 +264,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Kcptun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pw.nickytsui.Kcptun1;
+				PRODUCT_BUNDLE_IDENTIFIER = pw.nickytsui.Kcptun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -276,7 +276,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Kcptun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pw.nickytsui.Kcptun1;
+				PRODUCT_BUNDLE_IDENTIFIER = pw.nickytsui.Kcptun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

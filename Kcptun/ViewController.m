@@ -44,6 +44,7 @@ static NSString *clientFile = @"kcptun_client";
     
     [self read];
     [self checkRunning:YES];
+//    [self clear];
 }
 - (void)checkRunning:(BOOL)log{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -71,13 +72,21 @@ static NSString *clientFile = @"kcptun_client";
     [self checkRunning:YES];
     
 }
+//- (void)clear{
+//    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+//    [ud removeObjectForKey:@"_addr"];
+//    [ud removeObjectForKey:@"_port"];
+//    [ud removeObjectForKey:@"_psd"];
+//    [ud removeObjectForKey:@"_l_port"];
+//    [ud synchronize];
+//}
 - (void)read{
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    self.kcpipTextField.stringValue = [ud stringForKey:@"_addr"];
-    self.kcpportTextField.stringValue = [ud stringForKey:@"_port"];
-    self.kcppasswordTextField.stringValue = [ud stringForKey:@"_psd"];
-    self.kcplistenerTextField.stringValue = [ud stringForKey:@"_l_port"];
+    self.kcpipTextField.stringValue = [ud stringForKey:@"_addr"]?:@"";
+    self.kcpportTextField.stringValue = [ud stringForKey:@"_port"]?:@"";
+    self.kcppasswordTextField.stringValue = [ud stringForKey:@"_psd"]?:@"";
+    self.kcplistenerTextField.stringValue = [ud stringForKey:@"_l_port"]?:@"";
 }
 - (void)save{
     NSString *serverAddress = self.kcpipTextField.stringValue;
