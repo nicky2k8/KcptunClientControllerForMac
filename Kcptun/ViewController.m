@@ -44,6 +44,8 @@ static NSString *clientFile = @"kcptun_client";
     
     [self read];
     [self checkRunning:YES];
+    
+//    [self openProcess:@"sudo sysctl -w kern.timer.coalescing_enabled=0"];
 //    [self clear];
 }
 - (void)checkRunning:(BOOL)log{
@@ -105,12 +107,16 @@ static NSString *clientFile = @"kcptun_client";
     NSLog(@"path = %@",path);
     NSString *s = [NSString stringWithFormat:@"%@ -l :%@ -r %@:%@ -mode fast2 -conn 1 -key %@ -mtu 1350",path,self.kcplistenerTextField.stringValue,self.kcpipTextField.stringValue,self.kcpportTextField.stringValue,self.kcppasswordTextField.stringValue];
     
-    NSTask *execution = [NSTask new];
-    execution.launchPath = @"/bin/sh";
-    execution.arguments = @[@"-c",s];
-    [execution launch];
+//    NSTask *execution = [NSTask new];
+//    execution.launchPath = @"/bin/sh";
+//    execution.arguments = @[@"-c",s];
+//    [execution launch];
+    
+    [self openProcess:s];
+
 
 }
+
 - (void)killProcess{
     for (id obj in self.processArray) {
         NSDictionary *process = obj;
@@ -118,14 +124,18 @@ static NSString *clientFile = @"kcptun_client";
             NSInteger processID = [process[@"ProcessID"] integerValue];
             
             NSString *exec = [NSString stringWithFormat:@"kill -9 %zd",processID];
-            NSTask *execution = [NSTask new];
-            execution.launchPath = @"/bin/sh";
-            execution.arguments = @[@"-c",exec];
-            [execution launch];
+            [self openProcess:exec];
             break;
         }
     }
     
+}
+- (void)openProcess:(NSString *)path{
+    //kern.timer.coalescing enabled
+    NSTask *execution = [NSTask new];
+    execution.launchPath = @"/bin/sh";
+    execution.arguments = @[@"-c",path];
+    [execution launch];
 }
 - (BOOL)checkProcessRunning:(BOOL)log{
     // 获取当前运行的程序
