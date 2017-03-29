@@ -11,7 +11,8 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 /** kcp客户端 文件名 */
-static NSString *clientFile = @"kcptun_client";
+//static NSString *clientFile = @"kcptun_client";
+static NSString *clientFile = @"kcptun_client_20170329";
 
 
 @interface ViewController ()

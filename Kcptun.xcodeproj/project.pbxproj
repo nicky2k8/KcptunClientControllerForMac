@@ -13,6 +13,7 @@
 		8A6F60531E602BA9002B8D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6F60521E602BA9002B8D27 /* Assets.xcassets */; };
 		8A6F60561E602BAA002B8D27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6F60541E602BAA002B8D27 /* Main.storyboard */; };
 		8A6F605E1E60339A002B8D27 /* kcptun_client in Resources */ = {isa = PBXBuildFile; fileRef = 8A6F605D1E60339A002B8D27 /* kcptun_client */; };
+		8AA02C831E8BBD0200C41FD1 /* kcptun_client_20170329 in Resources */ = {isa = PBXBuildFile; fileRef = 8AA02C821E8BBD0200C41FD1 /* kcptun_client_20170329 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8A6F60551E602BAA002B8D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A6F60571E602BAA002B8D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A6F605D1E60339A002B8D27 /* kcptun_client */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = kcptun_client; sourceTree = "<group>"; };
+		8AA02C821E8BBD0200C41FD1 /* kcptun_client_20170329 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = kcptun_client_20170329; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		8A6F60481E602BA9002B8D27 /* Kcptun */ = {
 			isa = PBXGroup;
 			children = (
+				8AA02C821E8BBD0200C41FD1 /* kcptun_client_20170329 */,
 				8A6F605D1E60339A002B8D27 /* kcptun_client */,
 				8A6F60491E602BA9002B8D27 /* AppDelegate.h */,
 				8A6F604A1E602BA9002B8D27 /* AppDelegate.m */,
@@ -137,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA02C831E8BBD0200C41FD1 /* kcptun_client_20170329 in Resources */,
 				8A6F60531E602BA9002B8D27 /* Assets.xcassets in Resources */,
 				8A6F605E1E60339A002B8D27 /* kcptun_client in Resources */,
 				8A6F60561E602BAA002B8D27 /* Main.storyboard in Resources */,
@@ -210,7 +214,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -251,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -264,6 +268,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Kcptun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = pw.nickytsui.Kcptun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -276,6 +281,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Kcptun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = pw.nickytsui.Kcptun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -300,6 +306,7 @@
 				8A6F605C1E602BAA002B8D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
